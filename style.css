@@ -317,6 +317,7 @@ h2 em { color: var(--gold); font-weight: 500; }
   transition: transform .2s ease, background .2s ease;
 }
 .platform-card:hover { transform: translateY(-3px); background: rgba(255, 255, 255, .42); }
+.platform-card:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .platform-number { color: var(--dim); }
 .platform-icon, .platform-card-featured .platform-icon { border-color: rgba(37, 150, 190, .35); color: var(--gold); }
 .platform-copy h3 { color: var(--ink); font-family: var(--sans); font-size: 17px; font-weight: 600; }
@@ -576,4 +577,56 @@ h2 em { color: #665750; }
 
 @media (prefers-reduced-motion: reduce) {
   body { background-attachment: scroll, scroll; }
+}
+
+.honeypot {
+  position: absolute;
+  width: 1px !important;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.form-note a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+.submit-button:disabled { cursor: wait; opacity: .65; }
+
+.release-banner {
+  display: flex;
+  min-height: 82px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(214, 202, 186, .96);
+  color: var(--ink);
+}
+.release-countdown-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .18em;
+}
+.release-countdown {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.countdown-unit { display: grid; min-width: 34px; justify-items: center; line-height: 1; }
+.countdown-unit strong { font: 500 22px/1 var(--serif); }
+.countdown-unit small { margin-top: 5px; color: var(--muted); font: 7px/1 var(--sans); letter-spacing: .12em; }
+.countdown-divider { align-self: flex-start; color: var(--muted); font: 18px/1 var(--serif); }
+.release-countdown--released { color: var(--ink); font: 600 18px/1 var(--sans); letter-spacing: .18em; }
+
+@media (max-width: 640px) {
+  .release-banner { min-height: 70px; gap: 17px; padding-inline: 12px; }
+  .release-countdown-label { font-size: 8px; letter-spacing: .12em; }
+  .release-countdown { gap: 7px; }
+  .countdown-unit { min-width: 28px; }
+  .countdown-unit strong { font-size: 19px; }
+  .countdown-unit small { font-size: 6px; }
+  .countdown-divider { font-size: 15px; }
+  .release-countdown--released { font-size: 15px; }
 }

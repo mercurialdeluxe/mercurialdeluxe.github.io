@@ -12,13 +12,14 @@
     <link rel="icon" href="albumcover.png" type="image/png">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QQVKGM99RV"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-QQVKGM99RV');
-    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QQVKGM99RV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QQVKGM99RV');
+</script>
   </head>
   <body>
     <header class="site-header">
@@ -33,6 +34,19 @@
       </nav>
       <a class="header-cta" href="#listen">Find your platform <span aria-hidden="true">↗</span></a>
     </header>
+
+    <section class="release-banner" aria-label="Mercurial Deluxe release countdown">
+      <p class="release-countdown-label" id="release-countdown-label">RELEASE IN</p>
+      <div class="release-countdown" id="release-countdown" aria-live="off">
+        <span class="countdown-unit"><strong id="countdown-days">--</strong><small>DAYS</small></span>
+        <span class="countdown-divider" aria-hidden="true">:</span>
+        <span class="countdown-unit"><strong id="countdown-hours">--</strong><small>HRS</small></span>
+        <span class="countdown-divider" aria-hidden="true">:</span>
+        <span class="countdown-unit"><strong id="countdown-minutes">--</strong><small>MIN</small></span>
+        <span class="countdown-divider" aria-hidden="true">:</span>
+        <span class="countdown-unit"><strong id="countdown-seconds">--</strong><small>SEC</small></span>
+      </div>
+    </section>
 
     <main>
       <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
@@ -71,7 +85,7 @@
           <p class="section-intro">Choose your corner of the internet.<br>More ways to listen are on the way.</p>
         </div>
         <div class="platform-grid">
-          <div class="platform-card platform-card-featured">
+          <a class="platform-card platform-card-featured" id="youtube-card" data-release-href="https://www.youtube.com/playlist?list=PLQEdgNxwrnTk" aria-disabled="true" tabindex="-1" aria-label="Mercurial Deluxe on YouTube — coming soon">
             <span class="platform-number">01</span>
             <div class="platform-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M21.58 7.19a2.98 2.98 0 0 0-2.1-2.11C17.63 4.57 12 4.57 12 4.57s-5.63 0-7.48.51a2.98 2.98 0 0 0-2.1 2.11C1.91 9.05 1.91 12 1.91 12s0 2.95.51 4.81a2.98 2.98 0 0 0 2.1 2.11c1.85.51 7.48.51 7.48.51s5.63 0 7.48-.51a2.98 2.98 0 0 0 2.1-2.11c.51-1.86.51-4.81.51-4.81s0-2.95-.51-4.81ZM9.95 15.18V8.82L15.45 12l-5.5 3.18Z"/></svg>
@@ -80,32 +94,21 @@
               <h3>YouTube</h3>
               <p>Watch the live recordings</p>
             </div>
-            <span class="availability">Coming soon <span aria-hidden="true">↗</span></span>
-          </div>
+            <span class="availability"><span id="youtube-availability">Coming soon</span> <span id="youtube-arrow" aria-hidden="true" hidden>↗</span></span>
+          </a>
           <div class="platform-card">
             <span class="platform-number">02</span>
-            <div class="platform-icon soundcloud-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M1.2 14.1c-.08.26-.12.54-.12.82 0 1.23.98 2.23 2.19 2.23h.16l.4-4.36a2.15 2.15 0 0 0-2.63 1.31Zm3.29-2.51-.45 5.56h1.08V8.48a2.6 2.6 0 0 0-.63 1.55v1.56Zm2.22-3.83v9.39h1.07V7.07a3.08 3.08 0 0 0-1.07.69Zm2.21-.88v10.27h1.08V6.59c-.38 0-.74.1-1.08.29Zm2.22.1v10.17h1.07V6.92a3.65 3.65 0 0 0-1.07.06Zm2.21.86v9.31h1.08V8.24a4.2 4.2 0 0 0-1.08-.4Zm2.22 2.02v7.29h1.07v-6.08a4.62 4.62 0 0 0-1.07-1.21Zm5.5 1.06c-.64 0-1.24.22-1.72.59a4.24 4.24 0 0 0-4.12-3.27v8.91h5.84a3.12 3.12 0 0 0 0-6.23Z"/></svg>
-            </div>
-            <div class="platform-copy">
-              <h3>SoundCloud</h3>
-              <p>Stream the deluxe set</p>
-            </div>
-            <span class="availability">Coming soon <span aria-hidden="true">↗</span></span>
-          </div>
-          <div class="platform-card">
-            <span class="platform-number">03</span>
             <div class="platform-icon file-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M13.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.5L13.5 2Zm0 2.4 4.1 4.1h-4.1V4.4ZM18 20H6V4h5.5v6.5H18V20Zm-6-8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"/></svg>
             </div>
             <div class="platform-copy">
               <h3>Local files</h3>
-              <p>Keep a copy for yourself</p>
+              <p>Keep a copy for yourself or use as local files on platforms like Spotify</p>
             </div>
             <span class="availability">Coming soon <span aria-hidden="true">↗</span></span>
           </div>
         </div>
-        <div class="listen-note"><span class="note-star" aria-hidden="true">✳</span> Follow along — release links will appear here as they go live.</div>
+        <div class="listen-note"><span class="note-star" aria-hidden="true">✳</span> Follow along — release links will appear here as they go live.    |    Links will be available once the album is released.</div>
       </section>
 
       <section class="about-section" id="about" aria-labelledby="about-title">
@@ -138,22 +141,39 @@
             <div class="work-item">
               <span class="work-index">01</span>
               <span class="work-name"><i>Mercurial Deluxe</i></span>
-              <span class="work-detail">LIVE FAN EDITION</span>
+              <span class="work-detail">LIVE ALBUM EDITION</span>
             </div>
-            <p class="works-note">An independent fan project based on <i>Mercurial</i> by chandol. More of uranium’s work will be added here.</p>
+            <div class="work-item">
+              <span class="work-index">02</span>
+              <span class="work-name"><i>Burnout World Tour Edition</i></span>
+              <span class="work-detail">LIVE ALBUM EDITION</span>
+            </div>
+            <div class="work-item">
+              <span class="work-index">03</span>
+              <span class="work-name"><i>Chandolum</i></span>
+              <span class="work-detail">ARTIST COMMUNITY</span>
+            </div>
+            <div class="work-item">
+              <span class="work-index">04</span>
+              <span class="work-name"><i>Lyric Videos</i></span>
+              <span class="work-detail">VIDEOS</span>
+            </div>
+            <p class="works-note">Independent fan projects of me. More to come. You can find these projects on my social media.</p>
           </div>
           <div class="message-column">
             <p class="mini-label">SEND A MESSAGE</p>
-            <p class="message-intro">Questions, kind words, want to collab, or something else? Drop a note and your email app will take it from here.</p>
-            <form class="contact-form" id="contact-form">
+            <p class="message-intro">Questions, kind words, want to collab, or something else? Send me a message here.</p>
+            <form class="contact-form" id="contact-form" action="https://formsubmit.co/uraniumdonx@gmail.com" method="POST" data-ajax-action="https://formsubmit.co/ajax/uraniumdonx@gmail.com">
+              <input type="hidden" name="_subject" value="Mercurial Deluxe website message">
+              <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
               <label for="name">Your name</label>
               <input id="name" name="name" type="text" autocomplete="name" placeholder="What should I call you?" required>
               <label for="email">Your email</label>
               <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
               <label for="message">Your message</label>
               <textarea id="message" name="message" rows="3" placeholder="Write your message here…" required></textarea>
-              <button class="button button-primary submit-button" type="submit">Open email to send <span aria-hidden="true">↗</span></button>
-              <p class="form-note">This form opens your email app; your message is not sent or stored by this site.</p>
+              <button class="button button-primary submit-button" type="submit">Send message <span aria-hidden="true">↗</span></button>
+              <p class="form-note">Messages are processed by FormSubmit and emailed to me. First use requires confirming their activation email. You can also email <a href="mailto:uraniumdonx@gmail.com">uraniumdonx@gmail.com</a> directly.</p>
               <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             </form>
           </div>
@@ -168,15 +188,94 @@
     </footer>
 
     <script>
+      const releaseAt = new Date('2026-10-30T00:00:00-04:00');
+      const countdownLabel = document.getElementById('release-countdown-label');
+      const countdown = document.getElementById('release-countdown');
+      const youtubeCard = document.getElementById('youtube-card');
+      const youtubeAvailability = document.getElementById('youtube-availability');
+      const youtubeArrow = document.getElementById('youtube-arrow');
+
+      function updateReleaseCountdown() {
+        const remaining = releaseAt.getTime() - Date.now();
+        if (remaining <= 0) {
+          countdownLabel.textContent = 'STATUS';
+          countdown.classList.add('release-countdown--released');
+          countdown.textContent = 'RELEASED';
+          youtubeCard.href = youtubeCard.dataset.releaseHref;
+          youtubeCard.target = '_blank';
+          youtubeCard.rel = 'noopener noreferrer';
+          youtubeCard.removeAttribute('aria-disabled');
+          youtubeCard.removeAttribute('tabindex');
+          youtubeCard.setAttribute('aria-label', 'Watch the Mercurial Deluxe live recordings on YouTube');
+          youtubeAvailability.textContent = 'Listen on YouTube';
+          youtubeArrow.hidden = false;
+          return false;
+        }
+
+        const days = Math.floor(remaining / 86400000);
+        const hours = Math.floor((remaining % 86400000) / 3600000);
+        const minutes = Math.floor((remaining % 3600000) / 60000);
+        const seconds = Math.floor((remaining % 60000) / 1000);
+        document.getElementById('countdown-days').textContent = String(days).padStart(2, '0');
+        document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('countdown-minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('countdown-seconds').textContent = String(seconds).padStart(2, '0');
+        return true;
+      }
+
+      if (updateReleaseCountdown()) {
+        window.setInterval(updateReleaseCountdown, 1000);
+      }
+
       const contactForm = document.getElementById('contact-form');
       const formStatus = document.getElementById('form-status');
-      contactForm.addEventListener('submit', (event) => {
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const initialButtonMarkup = submitButton.innerHTML;
+
+      contactForm.addEventListener('submit', async (event) => {
         event.preventDefault();
-        const recipient = 'uraniumdonx@gmail.com';
-        const data = new FormData(contactForm);
-        const subject = encodeURIComponent(`Mercurial Deluxe message from ${data.get('name')}`);
-        const body = encodeURIComponent(`From: ${data.get('name')} (${data.get('email')})\n\n${data.get('message')}`);
-        window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+        if (!contactForm.reportValidity()) return;
+
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending…';
+        formStatus.textContent = '';
+
+        let response;
+        try {
+          response = await fetch(contactForm.dataset.ajaxAction, {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: { Accept: 'application/json' }
+          });
+        } catch {
+          formStatus.textContent = 'Could not reach the form service. Please try again or email me directly.';
+          submitButton.disabled = false;
+          submitButton.innerHTML = initialButtonMarkup;
+          return;
+        }
+
+        let result;
+        try {
+          result = await response.json();
+        } catch {
+          formStatus.textContent = 'The form service returned an unexpected response. Please try again or email me directly.';
+          submitButton.disabled = false;
+          submitButton.innerHTML = initialButtonMarkup;
+          return;
+        }
+
+        if (!response.ok || !result.success || result.success === 'false') {
+          formStatus.textContent = result.message || 'Your message could not be sent. Please try again or email me directly.';
+          submitButton.disabled = false;
+          submitButton.innerHTML = initialButtonMarkup;
+          return;
+        }
+
+        contactForm.reset();
+        formStatus.textContent = 'Message submitted. If this is your first time using the form, confirm FormSubmit’s activation email to enable delivery.';
+        submitButton.disabled = false;
+        submitButton.innerHTML = initialButtonMarkup;
+        window.alert('Thanks for your message! Please keep an eye on your email for a response.');
       });
     </script>
   </body>
